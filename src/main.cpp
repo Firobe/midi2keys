@@ -31,7 +31,7 @@ int main() {
     done = false;
     char str[100];
     (void) signal(SIGINT, finish);
-    std::cout << "Beginning to read MIDI input..." << std::endl;
+    std::cout << "Now reading from MIDI input..." << std::endl;
 
     while (!done) {
         usleep(10);
