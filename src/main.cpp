@@ -53,12 +53,12 @@ int main() {
 
     std::cout << "Port ? ";
     std::cin >> port;
-    midiin->openPort(port);
-    midiin->ignoreTypes(true, true, true);
     done = false;
     (void) signal(SIGINT, finish);
     std::cout << "1. Start\n2. Map keys\nChoice : ";
     std::cin >> nBytes;
+    midiin->openPort(port);
+    midiin->ignoreTypes(true, true, true);
     std::cout << "Now reading from MIDI input..." << std::endl;
 
     if (nBytes == 1) {
